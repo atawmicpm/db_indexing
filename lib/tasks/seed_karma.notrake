@@ -1,0 +1,20 @@
+require_relative '../../config/environment'
+
+User.all.each do |user|
+
+  # karma_total = 0
+
+  # KarmaPoint.find_all_by_user_id(user.id).each do |karmapoint|
+  #   karma_total += karmapoint.value
+  # end
+
+  # if user.id % 1000 == 0
+  #   p user.id = karma_total
+  # end
+    user.update_attribute(:total_karma, user.get_total_karma);
+    # user.total_karma = user.get_total_karma
+    # user.save
+    p "#{user.id} = #{user.total_karma}"
+
+end
+

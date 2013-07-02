@@ -16,3 +16,18 @@
 body {
   padding-top: 60px;
 }
+
+#paginator {
+  text-align: center;
+  width: 100%;
+}
+
+.pagination a {
+  border: 1px solid LightBlue;
+  padding: 5px 10px;
+}
+
+.pagination .current {
+  border: 2px solid blue;
+  padding: 5px 10px;
+}

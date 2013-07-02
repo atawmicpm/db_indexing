@@ -10,3 +10,7 @@
     <%= render 'user_row', :user => user %>
   <% end %>
 </table>
+
+<div id='paginator'>
+  <%= will_paginate @users %>
+</div>

@@ -22,19 +22,19 @@ describe User do
 
   describe '.by_karma' do
     it 'returns users in order of highest-to-lowest karma' do
-      user_med   = create(:user_with_karma, :total => 500, :points => 2)
-      user_low   = create(:user_with_karma, :total => 200, :points => 2)
-      user_high  = create(:user_with_karma, :total => 800, :points => 2)
+      user_med   = create(:user_with_karma, :total_karma => 500, :points => 2)
+      user_low   = create(:user_with_karma, :total_karma => 200, :points => 2)
+      user_high  = create(:user_with_karma, :total_karma => 800, :points => 2)
 
       User.by_karma.should eq [user_high, user_med, user_low]
     end
   end
 
-  describe '#total_karma' do
-    let(:user) { create(:user_with_karma, :total => 500, :points => 2) }
+  describe '#get_total_karma' do
+    let(:user) { create(:user_with_karma, :total_karma => 500, :points => 2) }
 
     it 'returns the total karma for the user' do
-      user.total_karma.should eq 500
+      user.get_total_karma.should eq 500
     end
   end
 

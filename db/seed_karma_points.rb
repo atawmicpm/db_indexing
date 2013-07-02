@@ -9,7 +9,7 @@ User.all.each do |user|
     karma_total += karmapoint.value
   end
 
-  user.update_attributes(total_karma: karma_total)
+  user.update_attribute(:total_karma, karma_total)
 
 end
 

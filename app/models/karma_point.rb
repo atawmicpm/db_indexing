@@ -9,9 +9,9 @@ class KarmaPoint < ActiveRecord::Base
   after_save :update_user
 
 
-  def self.update_user
+  def update_user
     user = User.find(self.user_id)
-    user.update_attribute(total_karma: user.get_total_karma)
+    user.update_attribute(:total_karma, user.get_total_karma)
   end
 
 

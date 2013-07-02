@@ -12,6 +12,7 @@ gem 'will_paginate', '~> 3.0'
 group :development do
   gem 'quiet_assets'
   gem 'activerecord-import'
+  gem 'mocha'
 end
 
 group :development, :test do
@@ -24,6 +25,7 @@ group :test do
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'mocha'
 end
 
 group :assets do

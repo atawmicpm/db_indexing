@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   def self.by_karma
     self.order('total_karma DESC')
   end
+ 
 
   # def self.page(num = 1)
   #   per_page = 50
